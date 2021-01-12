@@ -1,8 +1,6 @@
 const request= require("request") ;
 const cheerio = require("cheerio") ;
 const fs = require("fs") ;
-const { create } = require("domain");
-const { createInflate } = require("zlib");
 module.exports= getmatch ;
 
 function getmatch(link)
