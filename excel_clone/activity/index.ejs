@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>electron app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="menu">Menu</div>
+  <div class="menu-options"> 
+    <div class="file-options">
+      <div class="font-style" > 
+        <select name="font-type" id="font">
+          <option value="monotype-corsiva">Monotype Corsiva</option>
+          <option value="Times-new-roman">Times New Roman</option>
+          <option value="Arial-Black">Arian Black</option>
+        </select>
+
+        <div class="style">
+          <div class="bold">B</div>
+          <div class="italic">I</div>
+          <div class="underline">U</div>
+        </div>
+      </div>
+      <div class="font-size"> 
+        <select name="size" id="size"> 
+        <input type="color" id="color">
+        <input type="color" id="highlight">
+        </select>
+      </div>
+      <div class="alignment">
+        <div class="left">L</div>
+        <div class="centre">C</div>
+        <div class="right">R</div>
+      </div>
+
+    </div>
+  </div>
+  <div class="address">
+    <input type="text" id="address" disabled="true">
+    <input type="text" id="formula">
+  </div>
+  <div class="content">
+    <div class="top-left-cell"></div>
+    <div class="top-row">
+      <% for(let j=0;j<26;j++) {%>
+        <div class="top-row-cell"> <%= String.fromCharCode(j+65) %> </div>
+        <%} %>
+    </div>
+    <div class="left-col">
+      <% for(let j=0;j<100;j++) {%>
+        <div class="left-col-cell" > <%=j+1 %> </div>
+        <%} %>
+    </div>
+    <div class="cells">
+      <% for(let i=0;i<100;i++) {%>
+             <div class="row">
+          <% for(let j=0;j<26;j++) {%>
+            <div class="cell" contenteditable="true" rowid=<%=i%> colid=<%=j%> > </div>
+            <%} %>
+         </div>    
+        <%} %> 
+      </div>
+
+  </div>
+  
+  
+  <div class="sheets">
+    <div class="sheet-list">
+      <div class="sheet active-sheet" sid="0">Sheet 1</div>
+    </div>
+    <div class="add-sheet"><i class="fas fa-plus-circle"></i></div>
+  </div>
+  
+  <script src="./script.js"></script>
+</body>
+</html>

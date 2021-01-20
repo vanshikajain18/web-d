@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin: 0px;
+}
+
+.menu{
+    height: 40px;
+    border: 1px solid;
+}
+
+.menu-options{
+    height: 60px;
+    border: 1px solid;
+}
+
+.address{
+    height: 40px;
+    border: 1px solid;
+}
+
+.content{
+    height: calc(100vh - 180px);
+    border: 1px solid;
+    overflow: auto;
+    position: relative;
+}
+
+.top-left-cell{
+    background: lightgray;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+}
+
+.left-col{
+    position: absolute;
+    top: 25px;
+    background: lightgreen;
+}
+.left-col-cell{
+    height: 25px;
+    width: 25px;
+    border: 1px solid;
+}
+.top-row{
+    display: flex;
+    text-align: center;
+    background: lightgreen;
+    position: absolute;
+    left: 25px;
+}
+.top-row-cell{
+    border: 1px solid;
+    min-width: 60px;
+    min-height: 25px;
+}
+.cells{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+.cell{
+    border: 1px solid;
+    min-width: 60px;
+    min-height: 25px;
+}
+
+.row{
+    display: flex;
+}
+
+.sheets{
+    height: 40px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+}
+
+.sheet-list{
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+.sheet{
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid lightgreen;
+    border-radius: 7px;
+    cursor: default
+}
+
+.active-sheet{
+    background-color: lightgreen;
+}
+.add-sheet{
+    background-blend-mode: darken;
+    margin-left: 5px;
+    font-size: 21px;
+    color: lightgreen;
+}
+
+.file-options{
+
+}
+.font-style{
+
+}
+
+.font-type{
+
+}
+.style{
+
+}
+.bold
+{
+
+}
+.italic { }
+.underline { }
+.font-size{ }
+.size{ }
+.color{ }
+.highlight{ }
+.alignment{
+
+}
+.left{ }
+.centre{ }
+.right{ }
