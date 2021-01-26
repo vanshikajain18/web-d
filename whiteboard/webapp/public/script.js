@@ -62,5 +62,5 @@ canvas.addEventListener("mouseup",function(e){
   db.push(line) ;
   line=[] ;
   if(redoDB.length) redoDB=[] ;
-socket.emit("mu",pointObject);
+socket.emit("mu");
 })

@@ -55,7 +55,7 @@ function createSticky(element)
         }
     })
 
-    stickyNav.addEventListener("mouseup",function(e){
+    stickyNav.addEventListener("mouseup",function(){
            isStickyHold=false ;
     })
 
