@@ -6,15 +6,10 @@
   
   .content {
     height: 100vh;
-  
     width: 100vw;
-  
     background: lightgray;
-  
     display: flex;
-  
     justify-content: center;
-  
     align-items: center;
   }
   
@@ -66,15 +61,10 @@
   }
   .chat-type-box {
     background: white;
-  
     border-bottom-right-radius: 10px;
-  
     height: 10%;
-  
     display: flex;
-  
     align-items: center;
-  
     justify-content: space-evenly;
   }
   #send-chat {
@@ -87,10 +77,25 @@
     color: lightslategray;
     font-size: 20px;
   }
-  .send {
+
+  .leave{
+    background: #ef3131;
+    float: right;
+    color: white;
+    clear: both;
+    width: 90%;
+    justify-content: center;
+}
+
+  .join{
+    background: #03b300;
+    float: right;
+    color: white;
+    clear: both;
+    width: 90%;
+    justify-content: center;
   }
   .fas {
     font-size: 25px;
-  
     color: #7d7cda;
   }

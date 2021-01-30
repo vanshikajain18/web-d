@@ -2,6 +2,11 @@ let textInput =document.querySelector("#send-chat") ;
 let send= document.querySelector(".send") ;
 let chatList=document.querySelector(".chat-list")
 
+let username = prompt("Enter Your Name");        //to get username 
+console.log(username);
+
+socket.emit("join" , username);
+
 send.addEventListener("click",function(){
     let message= textInput.value ;
     // console.log(message) ;
@@ -14,6 +19,9 @@ send.addEventListener("click",function(){
         chatList.append(chat) ;
         textInput.value="" ;
         chatList.scrollTop = chatList.scrollHeight ;
+
+        socket.emit("send-chat",message) ;
+        
     }
 
 })

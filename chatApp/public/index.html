@@ -15,6 +15,8 @@
             <div class="chat-box">
                 <div class="chat-list">
                     <div class="chat left">Hey how are you ??</div>
+                    <!-- <div class="chat join">abc joined chat</div>
+                    <div class="chat leave">ahe left chat</div> -->
                     <div class="chat right">I am fine wbu ?</div>
                     <div class="chat left">All good !!</div>
                     <div class="chat left">So whats going on ?</div>
@@ -22,7 +24,7 @@
                     <div class="chat right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat officiis laborum incidunt! Numquam placeat, maiores architecto voluptas reprehenderit vitae voluptates in expedita exercitationem obcaecati unde, dolores cumque nulla? Sapiente, eius.
                     </div>
 
-                </div>
+                </div>            
                 <div class="chat-type-box">
                     <input type="text" id="send-chat" placeholder="Type a message !">
                     <div class="send">
@@ -32,6 +34,13 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.js" integrity="sha512-+l9L4lMTFNy3dEglQpprf7jQBhQsQ3/WvOnjaN/+/L4i0jOstgScV0q2TjfvRF4V+ZePMDuZYIQtg5T4MKr+MQ==" crossorigin="anonymous"></script>
+
+     <script>
+    const socket= io.connect("http://localhost:3000") ;
+    </script>
+    <script src="./socket.js"></script>
     <script src="./script.js"></script>
+
 </body>
 </html>
