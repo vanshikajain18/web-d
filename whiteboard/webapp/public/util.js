@@ -37,7 +37,7 @@ function createSticky(element)
     })
 
     stickyNav.addEventListener("mousemove",function(e){
-        if(isStickyHold)
+        if(isStickyHold==true)
         {
             let finalX = e.clientX ;
             let finalY = e.clientY ;
@@ -47,11 +47,12 @@ function createSticky(element)
 
             let {top, left} = sticky.getBoundingClientRect() ;
 
-            sticky.style.top = top +dy +"px" ;
-            sticky.style.left= left +dx+ "px" ;
+            sticky.style.top = top + dy +"px" ;
+            sticky.style.left= left + dx+ "px" ;
 
             initialY=finalY;
             initialX=finalX ;
+            
         }
     })
 
@@ -64,7 +65,7 @@ function createSticky(element)
         stickyContent.style.display= (stickyContent.style.display=="none" ? "block" : "none") ;
     })
 
-    close.addEventListener("click",function(e){
+    close.addEventListener("click",function(){
         sticky.remove()
     })
 }
