@@ -1,11 +1,18 @@
 let textInput =document.querySelector("#send-chat") ;
 let send= document.querySelector(".send") ;
-let chatList=document.querySelector(".chat-list")
+let chatList=document.querySelector(".chat-list") ;
+
+let onlineDB=[] ;
 
 let username = prompt("Enter Your Name");        //to get username 
 console.log(username);
 
 socket.emit("join" , username);
+
+socket.on("create-list", function(usernameDb){
+    onlineDB = usernameDb ;
+ createOnlineList() ;
+})
 
 send.addEventListener("click",function(){
     let message= textInput.value ;

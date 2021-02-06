@@ -25,7 +25,8 @@ io.on('connection', function(socket){
       }
       console.log(usernameDb) ;
 
-    socket.broadcast.emit("join-chat" , name) ;
+    socket.broadcast.emit("join-chat" , {"id" : socket.id ,"username" : name}) ;
+    socket.emit("create-list" , usernameDb ) ;
       
     })
 
