@@ -21,8 +21,16 @@ let tab ;
         await tab.click('div[data-analytics="NavBarProfileDropDown"]');
         await tab.waitForSelector('a[data-analytics="NavBarProfileDropDownAdministration"]' , {visible:true});
         await Promise.all([ tab.waitForNavigation({waitUntil:"networkidle2"}) , tab.click('a[data-analytics="NavBarProfileDropDownAdministration"]') ]); // navigation
-        // let bothLis = await tab.$$(".nav-tabs.nav.admin-tabbed-nav li");
-        // let manageChallengeLi = bothLis[1];
+        let bothLis = await tab.$$(".nav-tabs.nav.admin-tabbed-nav li");
+        let manageChallengeLi = bothLis[1];
+     
+        await Promise.all([ tab.waitForNavigation({waitUntil:"networkidle2"}) , manageChallengeLi.click() ]); 
+        let allLinks = await tab.$(".backbone.block-center") ;
+
+        for(let i=0 ;i<allLinks;i++)
+        {
+            
+        }
 
     }
 
