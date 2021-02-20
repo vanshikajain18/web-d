@@ -2,12 +2,20 @@ const userModel = require("../model/userModel");
 
 async function createUser(req,res){
     try{
+        
         let userObject = req.body ;
-        console.log(userObject)
+         if(req.file)
+         {
+            //  console.log(req.file) ;
+            let profilePicPath = `images/users/${req.file.filename}` ;
+            userObject.profilePic = profilePicPath ;    //adding the path as a string in the object/doc 
+         }
+
+        console.log(userObject) ;
         let userCreated= await userModel.create(userObject);  //create object(document) in mondoDB 
          res.json({
              message: "user created successfully!",
-             userObject
+             userCreated 
          })
     }
     catch(error){
@@ -59,6 +67,12 @@ async function updateUser(req,res){
         
     for(let key in updatedObject)
     { user[key] = updatedObject[key] }      //loop to update the user object locally 
+
+    if(req.file)
+    {
+        let profilePicPath = `images/users/${req.file.filename}` ;
+        user.profilePic = profilePicPath ;   
+    }
 
     let updatedUser = await user.save() ; //to change in mondoDB 
 

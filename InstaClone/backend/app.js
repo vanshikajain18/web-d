@@ -1,4 +1,5 @@
 const express = require("express") ;
+const requestRouter = require("./router/requestRouter");
 const { userRouter } = require("./router/userRouter");
 const app = express() ;
 
@@ -7,6 +8,8 @@ app.use(express.json()) ;
 
 // for all the user related functions navigate to userRouter;
 app.use("/api/user", userRouter) ;
+
+app.use("/api/request", requestRouter) ;
 
 app.listen(3000, function(){
     console.log("app started at port 3000 !!") ;
