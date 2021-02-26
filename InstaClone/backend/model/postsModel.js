@@ -5,17 +5,19 @@ let postSchema = mongoose.Schema({
         type:String,
         required: true 
     },
-    postCaption :{
+    caption :{
         type: String 
     },
     createdOn :{
         type: Date,
-        default:Date.now 
+        default:Date.now
     },
     uid :{
       type:String ,
       required: true 
-    }
+    },
+    likes: [{uid:String}],
+    comments: [ {uid:String , comment:String }]
 
 })
 

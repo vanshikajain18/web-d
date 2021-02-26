@@ -1,4 +1,5 @@
 const express = require("express") ;
+const postsRouter = require("./router/postRouter");
 const requestRouter = require("./router/requestRouter");
 const { userRouter } = require("./router/userRouter");
 const app = express() ;
@@ -10,6 +11,8 @@ app.use(express.json()) ;
 app.use("/api/user", userRouter) ;
 
 app.use("/api/request", requestRouter) ;
+
+app.use("/api/post" , postsRouter) ;
 
 app.listen(3000, function(){
     console.log("app started at port 3000 !!") ;
